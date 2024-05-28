@@ -6,7 +6,8 @@ import DotPattern from "@/components/magicui/dot-pattern";
 import { cn } from "@/lib/utils";
 import WordPullUp from "@/components/magicui/word-pull-up";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
-import Link from "next/link";
+import Section3 from "@/components/section3";
+import Section4 from "@/components/section4";
 
 export default function Home() {
 
@@ -33,11 +34,11 @@ export default function Home() {
                       className="text-6xl font-bold tracking-[-0.02em]  md:text-7xl md:leading-[5rem] "
                       words="The Cool and Great Kira Aziz"
                     />
-                    <Link href="#2" className="border-2 border-black h-12 rounded-full w-7  z-50 absolute bottom-0 right-1/2 -translate-y-6 ">
+                    <a href="#2" className="border-2 border-black h-12 rounded-full w-7  z-50 absolute bottom-0 right-1/2 -translate-y-6 ">
                       <div className="h-full w-full relative p-1.5">
                         <div className="absolute h-3 w-3 bg-black rounded-full animate-bounce bottom-1.5" />
                       </div>
-                    </Link>
+                    </a>
                   </div>
 
                 </div>
@@ -75,6 +76,8 @@ export default function Home() {
                 </div>
 
               </div>
+              <Section3 />
+              <Section4 />
             </ReactFullpage.Wrapper>
           );
         }}

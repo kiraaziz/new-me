@@ -12,8 +12,11 @@
     "@fullpage/react-fullpage": "^0.1.42",
     "@motionone/utils": "^10.17.0",
     "next": "14.2.3",
+    "next-themes": "^0.3.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-icon-cloud": "^4.1.4",
+    "react-intersection-observer": "^9.10.2"
   },
   "devDependencies": {
     "clsx": "^2.1.1",
