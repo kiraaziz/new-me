@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.42",
+    "@iconify/react": "^5.0.1",
     "@motionone/utils": "^10.17.0",
     "next": "14.2.3",
     "next-themes": "^0.3.0",

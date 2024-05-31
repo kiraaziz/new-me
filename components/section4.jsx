@@ -1,50 +1,69 @@
-import IconCloud from "@/components/magicui/icon-cloud";
 import { motion } from "framer-motion"
 import { AuroraBackground } from "./ui/aurora-background";
+import { cn } from "@/lib/utils";
+import Marquee from "@/components/magicui/marquee";
+import { stack1, stack2, svgs } from "@/lib/data/stack";
+import { Icon } from '@iconify/react'
 
-const slugs = [
-    "typescript",
-    "javascript",
-    "java",
-    "react",
-    "html5",
-    "css3",
-    "express",
-    "nextdotjs",
-    "prisma",
-    "postgresql",
-    "firebase",
-    "vercel",
-    "git",
-    "github",
-    "visualstudiocode",
-    "figma",
-    "hugginfface"
-];
+const ReviewCard = ({
+    name,
+    parent,
+    svg,
+    off
+}) => {
+    return (
+        <figure
+            className={cn(
+                "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+                // light styles
+                "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+                // dark styles
+            )}
+        >
+            <div className="flex flex-row items-center gap-2">
+                {!off ? <Icon icon={svg} fontSize={34} /> : <img
+                    className="min-h-2 min-w-2"
+                    src={svgs[svg]}
+                />}
+                <div className="flex flex-col">
+                    <figcaption className="text-sm font-medium dark:text-white">
+                        {name}
+                    </figcaption>
+                    <p className="text-xs font-medium flex items-center justify-center text-white/50 w-max">
+                        {parent}</p>
+                </div>
+            </div>
+        </figure>
+    );
+};
 
 export default function IconCloudDemo() {
     return (
-        <div className="section h-full">
+        <div className="section h-[100svh]  overflow-hidden ">
             <AuroraBackground>
-
-
-                <div id="2" className="relative h-[100svh] w-full flex items-center justify-end  overflow-hidden  flex-col">
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.8, duration: 1, type: "spring", stiffness: 20 }}
-                        className="relative h-max w-max translate-y-14">
-                        <div
-                            className="h-60 w-60 z-10">
-                            <IconCloud iconSlugs={slugs} />
-                        </div>
-                        {/* <div className="absolute h-64 w-64 border-4 rounded-full top-0 -z-10 translate-y-10  bg-gradient-to-tr from-[#9c40ff] to-[#d81074] blur-lg" /> */}
-                    </motion.div>
+                <div className="relative h-[100svh] w-full flex items-center justify-end  overflow-hidden  flex-col">
+                    <div className="relative top-10 lg:top-24">
+                        <Marquee pauseOnHover className="[--duration:45s] top-1/3">
+                            {stack1.map((review, index) => (
+                                <ReviewCard parent={review.parent} key={index} {...review} />
+                            ))}
+                        </Marquee>
+                        <Marquee reverse pauseOnHover className="[--duration:45s] top-1/3">
+                            {stack2.map((review, index) => (
+                                <ReviewCard parent={review.parent} key={index} {...review} />
+                            ))}
+                        </Marquee>
+                    </div>
                     <motion.img
                         initial={{ translateY: 400 }}
                         whileInView={{ translateY: 50 }}
                         transition={{ duration: 1, type: "spring", stiffness: 20 }}
-                        className="" src="/9.png" />
+                        className="hidden lg:block" src="/9.png" />
+                    <img
+                        initial={{ translateY: 400 }}
+                        whileInView={{ translateY: 50 }}
+                        transition={{ duration: 1, type: "spring", stiffness: 20 }}
+                        className="block lg:hidden" src="/9.png" />
                 </div >
             </AuroraBackground>
         </div >

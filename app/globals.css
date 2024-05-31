@@ -8,14 +8,14 @@ body {
   scroll-behavior: smooth;
 }
 
-.scroller {
+/* .scroller {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 
 .scroller section {
   scroll-snap-align: start;
-}
+} */
 
 .fp-watermark {
   display: none !important;
