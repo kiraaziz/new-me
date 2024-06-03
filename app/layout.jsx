@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: "Kira's",
@@ -13,7 +14,10 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/icon.svg" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className="h-full w-full ">{children}</body>
+      <body className="h-full w-full ">
+        <Analytics />
+        {children}
+      </body>
     </html>
   );
 }
