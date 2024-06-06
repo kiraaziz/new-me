@@ -14,7 +14,7 @@ export const AuroraBackground = ({
         <main>
             <div
                 className={cn(
-                    "relative flex overflow-hidden flex-col  h-[100vh] items-center justify-center  bg-lime-300",
+                    "relative flex overflow-hidden flex-col  h-[100vh] items-center justify-center  bg-pink-500",
                     className
                 )}
                 {...props}
@@ -25,7 +25,7 @@ export const AuroraBackground = ({
                     duration={1}
                     repeatDelay={1}
                     className={cn(
-                        "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+                        "opacity-80 [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
                         "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
                     )}
                 />
