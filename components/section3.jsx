@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 import Image from "next/image";
 import { Tabs } from "../components/ui/tabs";
 import Link from "next/link";
+import BlurIn from "./magicui/blur-in"
+import GradualSpacing from "@/components/magicui/gradual-spacing";
 
 export default function IconCloudDemo() {
     return (
@@ -37,6 +39,12 @@ export default function IconCloudDemo() {
                     <img
                         src="4.png" className="z-50  h-40 -rotate-45 -translate-x-48" />
                 </motion.div>
+                <div className="flex w-max items-end flex-col justify-end absolute z-50 top-0 left-0 m-10">
+                    <GradualSpacing
+                        className="font-display text-center text-4xl font-bold tracking-[-0.1em]  tex-white md:text-7xl md:leading-[5rem]  text-black"
+                        text="Kira's Masterpieces "
+                    />
+                </div>
                 <div className="w-11/12 lg:w-3/5 flex  lg:items-start items-center lg:justify-center  lg:-translate-y-12 h-full  z-50  ">
                     <TabsDemo />
                 </div>
@@ -57,7 +65,7 @@ export function TabsDemo() {
                     value: v.name,
                     content: <div className="w-full overflow-hidden relative rounded-xl  text-white text-xl md:text-4xl font-bold h-52 lg:h-full  lg:p-10 lg:bg-purple-400 lg:shadow-purple-400 lg:shadow-[0px_0px_25px_5px] ">
                         <p className="lg:block hidden">{v.name} </p>
-                        <DummyContent url={v.images[0]} />
+                        <DummyContent path={v.url} url={v.images[0]} />
                     </div>
                 }
             })} />
@@ -65,13 +73,15 @@ export function TabsDemo() {
     );
 }
 
-const DummyContent = ({ url }) => {
+const DummyContent = ({ url, path }) => {
     return (
-        <img
-            src={url}
-            alt="dummy image"
-            className="object-cover object-left-top  absolute inset-x-0  rounded-xl mx-auto  lg:w-[90%] lg:mt-5"
-        />
+        <Link href={`${path}`}>
+            <img
+                src={url}
+                alt="dummy image"
+                className="object-cover object-left-top  absolute inset-x-0  rounded-xl mx-auto  lg:w-[90%] lg:mt-5"
+            />
+        </Link>
     );
 };
 

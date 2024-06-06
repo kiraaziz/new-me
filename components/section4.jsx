@@ -71,7 +71,7 @@ export default function IconCloudDemo() {
                         transition={{ duration: 1, type: "spring", stiffness: 20 }}
                         className="block lg:hidden" src="/9.png" />
                 </div >
-                <div className="absolute bottom-0 left-0 m-10 flex items-start justify-start flex-col">
+                <div className="absolute bottom-0 right-0 m-10 flex items-end justify-end flex-col">
                     <GradualSpacing
                         className="font-display text-center text-4xl font-bold tracking-[-0.1em]  tex-white md:text-7xl md:leading-[5rem]  text-white"
                         text="Master Kira's Slaves"
