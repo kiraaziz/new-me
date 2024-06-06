@@ -51,7 +51,7 @@ export default function Home() {
                         whileInView={{ opacity: 1, translateY: 0 }}
                         transition={{ delay: 0.8, duration: 1, type: "spring", stiffness: 20 }}
 
-                        className="bg-black text-xl text-white py-3 px-6 mx-auto">Hire Me</motion.a>
+                        className="bg-black text-md text-white font-medium py-3 px-6 mx-auto">Hire Me</motion.a>
                       <div className="flex items-center justify-center w-full bottom-8 absolute ">
                         <button onClick={() => {
                           fullpageApi.moveSectionDown()
