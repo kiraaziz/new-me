@@ -27,3 +27,21 @@ body {
     --input: 0 0% 89.8%;
   }
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px !important;
+  /* adjust as needed */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* set to desired background color for the scrollbar holder */
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 0%);
+  /* set to desired gradient for the scrollbar thumb */
+  border-radius: 6px;
+  /* adjust as needed */
+}
