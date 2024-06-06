@@ -14,22 +14,27 @@ const ReviewCard = ({
     return (
         <figure
             className={cn(
-                "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-                // light styles
-                "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-                // dark styles
+                "relative w-64 backdrop-blur-xl bg-white/5 cursor-pointer overflow-hidden rounded-xl border border-gray-100/20 p-4",
             )}
         >
-            <div className="flex flex-row items-center gap-2">
+            <div className="blur-lg opacity-10 scale-[6] -z-10 absolute top-0 left-0">
                 {!off ? <Icon icon={svg} fontSize={34} /> : <img
                     className="min-h-2 min-w-2"
                     src={svgs[svg]}
                 />}
+            </div>
+
+            <div className="flex flex-row items-center gap-2">
+                {!off ? <Icon icon={svg} fontSize={34} /> : <img
+                    className="h-9"
+                    src={svgs[svg]}
+                />}
+
                 <div className="flex flex-col">
-                    <figcaption className="text-sm font-medium dark:text-white">
+                    <figcaption className="text- font-medium text-white">
                         {name}
                     </figcaption>
-                    <p className="text-xs font-medium flex items-center justify-center text-white/50 w-max">
+                    <p className="text-xs font-medium flex items-center justify-center text-white/70 w-max">
                         {parent}</p>
                 </div>
             </div>
