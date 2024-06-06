@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, Variants, motion } from "framer-motion";
 
 export default function GradualSpacing({
+    delay = 0,
     text,
     duration = 0.5,
     delayMultiple = 0.04,
@@ -23,7 +24,7 @@ export default function GradualSpacing({
                         whileInView="visible"
                         exit="hidden"
                         variants={framerProps}
-                        transition={{ duration, delay: i * delayMultiple }}
+                        transition={{ duration, delay: (i * delayMultiple) + delay }}
                         className={cn("drop-shadow-sm ", className)}
                     >
                         {char === " " ? <span>&nbsp;</span> : char}

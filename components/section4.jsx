@@ -77,6 +77,7 @@ export default function IconCloudDemo() {
                         text="Master Kira's Slaves"
                     />
                     <GradualSpacing
+                    delay={0.5}
                         className="font-display text-center text-4xl font-bold tracking-[-0.1em]  tex-white md:text-7xl md:leading-[5rem]  text-white"
                         text="and Allies"
                     />
