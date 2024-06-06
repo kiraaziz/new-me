@@ -46,6 +46,12 @@ export default function Home() {
                         className="text-6xl font-bold tracking-[-0.02em]  md:text-7xl md:leading-[5rem]  p-10"
                         words="The Cool and Great Kira Aziz"
                       />
+                      <motion.a href="https://www.facebook.com/aziz.kira.581/"
+                        initial={{ opacity: 0, translateY: 80 }}
+                        whileInView={{ opacity: 1, translateY: 0 }}
+                        transition={{ delay: 0.8, duration: 1, type: "spring", stiffness: 20 }}
+
+                        className="bg-black text-xl text-white py-3 px-6 mx-auto">Hire Me</motion.a>
                       <div className="flex items-center justify-center w-full bottom-8 absolute ">
                         <button onClick={() => {
                           fullpageApi.moveSectionDown()
