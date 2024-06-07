@@ -10,41 +10,41 @@ export default function IconCloudDemo() {
                 <motion.img
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1, type: "spring", stiffness: 20 }}
-                    src="/1.jpg" className="h-full w-1/3 object-cover" alt="Cloud Image" />
+                    transition={{ duration: 0.5, type: "spring", stiffness: 20 }}
+                    src="/1.jpg" className="h-full lg:w-1/3 object-cover" alt="Cloud Image" />
                 <div className="absolute h-full w-full mx-auto p-10 flex items-center justify-center flex-col ">
                     <div className='w-max flex items-start justify-start flex-col z-10 translate-y-10'>
                         <GradualSpacing
-                            duration={1}
-                            delay={1}
+                            duration={0.5}
+                            delay={0.5}
                             className="font-display text-center text-4xl font-bold tracking-[-0.1em]  tex-white md:text-7xl md:leading-[5rem]  text-white"
                             text="This world is a pit of cruelty"
                         />
                         <GradualSpacing
-                            duration={1}
-                            delay={2}
+                            duration={0.5}
+                            delay={1}
                             className="font-display text-center text-4xl font-bold tracking-[-0.1em]  tex-white md:text-7xl md:leading-[5rem]  text-white"
                             text="and only one can save it."
                         />
                         <GradualSpacing
-                            duration={1}
-                            delay={3}
+                            duration={0.5}
+                            delay={1.5}
                             className="font-display text-center text-4xl font-bold tracking-[-0.1em]  tex-white md:text-7xl md:leading-[5rem]  text-white"
                             text="That person is..."
                         />
                         <div className="relative w-full flex items-end justify-end">
                             <div className="absolute top-0 right-0">
                                 <GradualSpacing
-                                    duration={1}
-                                    delay={4}
-                                    className="font-display text-center text-4xl font-extrabold tracking-[-0.1em]  tex-white md:text-7xl md:leading-[5rem]  text-black opacity-40 blur-md -translate-y-4"
+                                    duration={0.5}
+                                    delay={2}
+                                    className="font-display text-center text-4xl font-extrabold tracking-[-0.1em]  tex-white md:text-7xl md:leading-[5rem]  text-amber-400 opacity-40 blur-lg -translate-y-4"
                                     text="KIRA AZIZ"
                                 />
                             </div>
                             <div className="absolute top-0 right-0">
                                 <GradualSpacing
-                                    duration={1}
-                                    delay={4}
+                                    duration={0.5}
+                                    delay={2}
                                     className="font-display text-center text-4xl font-extrabold tracking-[-0.1em]  tex-white md:text-7xl md:leading-[5rem]  text-white -translate-y-4"
                                     text="KIRA AZIZ"
                                 />

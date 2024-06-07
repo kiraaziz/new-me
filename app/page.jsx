@@ -9,6 +9,7 @@ import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import Section3 from "@/components/section3";
 import Section4 from "@/components/section4";
 import Section5 from "@/components/section5";
+import Section6 from "@/components/section6";
 import { useState } from "react";
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
     <div className="w-full h-[100svh] relative">
       <div className="absolute z-50 m-3 bottom-0 lg:top-1/2  lg:bottom-1/2 lg:right-0 ">
         <div className="gap-0.5 flex flex-row lg:flex-col">
-          {[...Array(5)].map((_, index) => (
+          {[...Array(6)].map((_, index) => (
             <button onClick={() => api && api.moveTo(index + 1)} className={`${api && index === api.getActiveSection() ? "bg-white" : "bg-white/40"} h-4 w-4 rounded   border border-black/20`}>{api && api.getActiveSection().index}</button>
           ))}
         </div>
@@ -96,6 +97,7 @@ export default function Home() {
                 <Section3 />
                 <Section4 />
                 <Section5 />
+                <Section6 />
               </ReactFullpage.Wrapper>
             </>
           );
