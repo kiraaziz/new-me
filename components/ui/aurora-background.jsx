@@ -25,7 +25,7 @@ export const AuroraBackground = ({
                     duration={1}
                     repeatDelay={1}
                     className={cn(
-                        "opacity-80 [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+                        "opacity-60 [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
                         "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
                     )}
                 />

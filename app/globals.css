@@ -45,3 +45,13 @@ body {
   border-radius: 6px;
   /* adjust as needed */
 }
+
+/* Custom CSS */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid  rgb(2 132 199);
+  /* Change color as needed */
+}
