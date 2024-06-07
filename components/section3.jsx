@@ -163,7 +163,7 @@ const stack = [{
     "name": "Story Ai",
     "description": "✨ Introducing Story Ai: Your AI-powered creative companion! 🚀📖 Transform ideas into stories effortlessly. 🌈 Simply choose your theme, pages, and genre to get a delightful and optimistic story. 🎉 Unleash creativity with ease! ✨",
     "tags": "next13 react firebase stable_diffusion llama lahuggingface ai",
-    "url": "https://story--ai.vercel.app/",
+    "url": "/",
     "images": [
         "https://res.cloudinary.com/dqfvbunr2/image/upload/v1709380342/portfolio/skkf7kxer6hfjap0su05.webp",
         "https://res.cloudinary.com/dqfvbunr2/image/upload/v1709380344/portfolio/ijub3xgtnfdlxgn4kait.webp",
@@ -189,6 +189,7 @@ const stack = [{
     "name": "UI editor",
     "description": "Revolutionize creativity with our React app! 🚀 Infused with Adobe XD vibes, it's the ultimate blend of style and functionality. Effortlessly unleash ideas! ✨",
     "tags": "react nextjs design ui",
+    "url": "/",
     "images": [
         "https://res.cloudinary.com/dqfvbunr2/image/upload/v1709378115/portfolio/seulj5hh2lgrl2ycqj7a.webp"
     ]

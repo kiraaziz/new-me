@@ -29,13 +29,15 @@ body {
 }
 
 ::-webkit-scrollbar {
+  margin: 10px;
+  @apply bg-transparent;
   width: 8px;
   height: 8px !important;
   /* adjust as needed */
 }
 
 ::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: white;
   /* set to desired background color for the scrollbar holder */
 }
 
@@ -46,12 +48,3 @@ body {
   /* adjust as needed */
 }
 
-/* Custom CSS */
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 200px solid  rgb(2 132 199);
-  /* Change color as needed */
-}
